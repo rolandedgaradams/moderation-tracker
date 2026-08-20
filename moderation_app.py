@@ -1,3 +1,12 @@
+import streamlit as st
+import streamlit.components.v1 as components
+
+st.set_page_config(
+    page_title="Question Paper Moderation Tracker", layout="wide"
+)
+
+# Embed your full HTML/JS app inside a Streamlit component window
+html_code = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -395,3 +404,6 @@ render();
 </script>
 </body>
 </html>
+"""
+
+components.html(html_code, height=950, scrolling=True)
